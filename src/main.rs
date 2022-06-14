@@ -25,7 +25,7 @@ async fn main() -> std::io::Result<()>  {
     HttpServer::new(|| {
         App::new().service(index)
     })
-    .bind(("127.0.0.1", 8060))?
+    .bind(("0.0.0.0", 8060))?
     .run()
     .await
 }
